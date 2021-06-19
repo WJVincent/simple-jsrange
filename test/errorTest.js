@@ -35,6 +35,13 @@ describe('Test error conditions', () => {
         })
     })
 
+    describe('d. should throw a RangeError if step is 0', () => {
+
+        it('should throw an error when invalid step is called for range(1,10,0)', () => {
+            expect(() => range(1, 10, 0)).to.throw(RangeError, 'Invalid args for range: 0')
+        })
+    })
+
     describe('e. should throw a RangeError if step is a float', () => {
 
         it('should throw an error when invalid step is called for range(1,10,0.5)', () => {
