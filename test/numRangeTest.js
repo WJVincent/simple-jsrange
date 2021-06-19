@@ -5,7 +5,7 @@ const range = require('../dist/');
 
 describe('Test numerical range', () => {
 
-    describe('With default step value', () => {
+    describe('a. With default step value', () => {
 
         it('should return the correct value for the range(0,10) using the default step value of 1', () => {
             const res = range(0, 10);
@@ -18,7 +18,7 @@ describe('Test numerical range', () => {
         })
     })
 
-    describe('With user defined step value', () => {
+    describe('b. With user defined step value', () => {
 
         it('should return the correct value for the range(0,10) using the step value of 2', () => {
             const res = range(0, 10, 2);
