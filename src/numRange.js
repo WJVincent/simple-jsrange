@@ -1,17 +1,17 @@
 const forwardNumRange = (start, end, step) => {
-    let nums = [];
-    for (let i = start; i < end; i += step) {
-        nums.push(i);
+    let res = [];
+    for (let i = start; i <= end; i += step) {
+        res.push(i);
     }
-    return nums;
+    return res;
 }
 
 const reverseNumRange = (start, end, step) => {
-    let nums = [];
-    for (let i = start; i > end; i -= step) {
-        nums.push(i);
+    let res = [];
+    for (let i = start; i >= end; i -= step) {
+        res.push(i);
     }
-    return nums
+    return res
 }
 
 const numRange = (start, end, step) => {
