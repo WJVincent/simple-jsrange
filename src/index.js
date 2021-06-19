@@ -4,7 +4,7 @@ const { numRange } = require('./numRanges')
 
 
 const range = (start, end, step = 1) => {
-  if (checkValue(start) && !end) return [start];
+  if (checkValue(start) && end === undefined) return [start];
 
   if (!checkValue(start) || !checkValue(end)) return throwInvalidRange(start, end);
   if (typeof start !== typeof end) return throwInvalidRange(start, end)
@@ -19,3 +19,5 @@ const range = (start, end, step = 1) => {
     return numRange(start, end, step)
   }
 };
+
+module.exports = range;

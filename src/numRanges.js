@@ -18,7 +18,6 @@ const numRange = (start, end, step) => {
     if (start < end) {
         return forwardNumRange(start, end, step)
     }
-    console.log('we got here')
     return reverseNumRange(start, end, step)
 }
 
