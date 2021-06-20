@@ -1,24 +1,40 @@
-const forwardNumRange = (start, end, step) => {
+const forwardNumRange = (start, end, options) => {
+    let { step, inc } = options
     let res = [];
-    for (let i = start; i <= end; i += step) {
-        res.push(i);
+
+    if (inc) {
+        for (let idx = start; idx <= end; idx += step) {
+            res.push(idx);
+        }
+    } else {
+        for (let idx = start; idx < end; idx += step) {
+            res.push(idx);
+        }
     }
     return res;
 }
 
-const reverseNumRange = (start, end, step) => {
+const reverseNumRange = (start, end, options) => {
+    let { step, inc } = options
     let res = [];
-    for (let i = start; i >= end; i -= step) {
-        res.push(i);
+
+    if (inc) {
+        for (let idx = start; idx >= end; idx -= step) {
+            res.push(idx);
+        }
+    } else {
+        for (let idx = start; idx > end; idx -= step) {
+            res.push(idx)
+        }
     }
     return res
 }
 
-const numRange = (start, end, step) => {
+const numRange = (start, end, options) => {
     if (start < end) {
-        return forwardNumRange(start, end, step)
+        return forwardNumRange(start, end, options)
     }
-    return reverseNumRange(start, end, step)
+    return reverseNumRange(start, end, options)
 }
 
 module.exports = { numRange }
