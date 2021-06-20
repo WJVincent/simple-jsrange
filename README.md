@@ -36,6 +36,7 @@ range(0, 10, { step: 2, inc: false }); //[0,2,4,6,8]
 
 ## Release History
 
+- 1.0.5 - Documentation
 - 1.0.4 - Added range options
 - 1.0.3 - Documentation
 - 1.0.2 - Documentation
