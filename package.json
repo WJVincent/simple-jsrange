@@ -1,6 +1,6 @@
 {
   "name": "simple-jsrange",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple range function for JavaScript",
   "main": "./dist/index.js",
   "scripts": {
