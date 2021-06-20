@@ -6,6 +6,7 @@ const newRangeError = (...args) =>
 const throwInvalidRange = (...args) => {
     throw newRangeError(...args);
 }
+
 const checkValue = (value) => {
     const isNumber = typeof value === "number";
     const isValidString = typeof value === "string" && value !== " " && value.length === 1;
