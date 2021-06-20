@@ -24,35 +24,35 @@ describe('Test error conditions', () => {
     describe('c. should throw a RangeError if start and end are of different types', () => {
 
         it('should throw an error when invalid range("a", 2) is called', () => {
-            expect(() => range('a', 2)).to.throw(RangeError, 'Invalid args for range: \'a\'')
+            expect(() => range('a', 2)).to.throw(RangeError)
         })
     })
 
     describe('d. should throw a RangeError if step is less than 0', () => {
 
         it('should throw an error when invalid step is called for range(1,10,-2)', () => {
-            expect(() => range(1, 10, -2)).to.throw(RangeError, 'Invalid args for range: -2')
+            expect(() => range(1, 10, { step: -2 })).to.throw(RangeError)
         })
     })
 
     describe('d. should throw a RangeError if step is 0', () => {
 
         it('should throw an error when invalid step is called for range(1,10,0)', () => {
-            expect(() => range(1, 10, 0)).to.throw(RangeError, 'Invalid args for range: 0')
+            expect(() => range(1, 10, { step: 0 })).to.throw(RangeError)
         })
     })
 
     describe('e. should throw a RangeError if step is a float', () => {
 
         it('should throw an error when invalid step is called for range(1,10,0.5)', () => {
-            expect(() => range(1, 10, 0.5)).to.throw(RangeError, 'Invalid args for range: 0.5')
+            expect(() => range(1, 10, { step: 0.5 })).to.throw(RangeError)
         })
     })
 
     describe('e. should throw a RangeError if step is a string', () => {
 
         it('should throw an error when invalid step is called for range(1,10,"a")', () => {
-            expect(() => range(1, 10, "a")).to.throw(RangeError, 'Invalid args for range: \'a\'')
+            expect(() => range(1, 10, { step: "a" })).to.throw(RangeError)
         })
     })
 })

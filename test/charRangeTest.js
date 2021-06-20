@@ -21,12 +21,12 @@ describe('Test char range', () => {
     describe('a. With user defined step value', () => {
 
         it('should return the correct value for the range("a", "d", 2) using the defualt step', () => {
-            let res = range("a", "d", 2)
+            let res = range("a", "d", { step: 2 })
             expect(res).to.deep.equal(["a", "c"])
         })
 
         it('should return the correct value for the range("d", "a", 2) using the defualt step', () => {
-            let res = range("d", "a", 2)
+            let res = range("d", "a", { step: 2 })
             expect(res).to.deep.equal(["d", "b"])
         })
     })

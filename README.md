@@ -14,7 +14,16 @@ npm install simple-jsrange
 
 ## Usage example
 
--WIP
+options:
+
+- step: default val = 1
+  - defines the change value for each iteration of the range function.
+- inc: default val = true
+  - defaults to an inclusive range but when set to false allows for an exclusive range
+
+```js
+range(startVal, endVal, { step: 2, inc: false });
+```
 
 ## Release History
 
