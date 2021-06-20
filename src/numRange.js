@@ -1,8 +1,3 @@
-const flags = {
-    step: 1,
-    i: true,
-};
-
 const forwardNumRange = (start, end, step) => {
     let res = [];
     for (let i = start; i <= end; i += step) {

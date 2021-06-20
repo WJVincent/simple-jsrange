@@ -25,6 +25,4 @@ const range = (start, end, step = 1) => {
   }
 };
 
-console.log(range(1, 1))
-
 module.exports = range;
