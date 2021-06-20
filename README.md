@@ -1,7 +1,7 @@
 # Simple JS-Range
 
 ```
-    A simple range function for javascript that handles both letters and numbers forward and in reverse.
+A simple range function for javascript that handles both letters and numbers forward and in reverse.
 ```
 
 One to two paragraph statement about your product and what it does.
