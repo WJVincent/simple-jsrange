@@ -1,10 +1,6 @@
 # Simple JS-Range
 
-```
-A simple range function for javascript that handles both letters and numbers forward and in reverse.
-```
-
-One to two paragraph statement about your product and what it does.
+    A simple range function for javascript that handles both letters and numbers forward and in reverse.
 
 ## Installation
 
@@ -14,15 +10,28 @@ npm install simple-jsrange
 
 ## Usage example
 
-options:
+Flags:
 
-- step: default val = 1
-  - defines the change value for each iteration of the range function.
-- inc: default val = true
-  - defaults to an inclusive range but when set to false allows for an exclusive range
+- step: Integer representing the incrementation. Default 1.
+- inc: Boolean representing inclusive or exclusive range. Default true
+
+`range(startVal, endVal, options = {step: int, inc: bool})`
 
 ```js
-range(startVal, endVal, { step: 2, inc: false });
+//Default usage -- {step: 1, inc: true}
+range(1, 3); //[1,2,3]
+range(3, 1); //[3,2,1]
+range("a", "c"); //["a","b","c"]
+range("c", "a"); //["c","b","a"]
+
+//With user defined step
+range(0, 10, { step: 2 }); //[0,2,4,6,8,10]
+
+//Exclusive range
+range(1, 3, { inc: false }); //[1,2]
+
+//Exclusive + user defined step
+range(0, 10, { step: 2, inc: false }); //[0,2,4,6,8]
 ```
 
 ## Release History
@@ -35,11 +44,9 @@ range(startVal, endVal, { step: 2, inc: false });
 
 ## Maintainer
 
-William Vincent – william@william-vincent.dev
+William Vincent – william@william-vincent.dev - [GitHub](https://github.com/WJVincent)
 
 Distributed under the MIT license. See `LICENSE` for more information.
-
-[My Github](https://github.com/WJVincent)
 
 ## Contributing
 
