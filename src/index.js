@@ -12,7 +12,7 @@ const range = (start, end, options = {}) => {
     options.step = 1;
   }
 
-  if (checkValue(start) && end === undefined || start === end) return [start]; //tested
+  if (checkValue(start) && end === undefined || start === end) return [start];
 
   if (checkAllValues(start, end, options)) {
     return throwInvalidRange(start, end, options)

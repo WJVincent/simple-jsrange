@@ -1,6 +1,6 @@
 # Simple JS-Range
 
-    A simple range function for javascript that handles both letters and numbers forward and in reverse.
+A simple range function for javascript that handles both letters and numbers forward and in reverse.
 
 ## Installation
 
